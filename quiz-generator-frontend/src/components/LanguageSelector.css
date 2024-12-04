@@ -1,0 +1,44 @@
+.language-selector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.language-label {
+    margin: 10px 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+}
+
+.language-button {
+    color: white;
+    background-color: #2d3748;
+}
+
+.menu-list {
+    background-color: #110c1b;
+    z-index: 9999;
+}
+
+.menu-item {
+    color: white;
+    background-color: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    z-index: 1001;
+}
+
+.menu-item.active {
+    color: #3182ce;
+}
+
+.menu-item:hover {
+    background-color: #1a202c;
+}
+
+.language-version {
+    color: #718096;
+    font-size: 0.875rem;
+}

@@ -1,0 +1,220 @@
+.finished-quizzes-title {
+    font-size: 1.75rem; /* Match the font size of "Courses" */
+    font-weight: 900;  /* Bold text */
+    text-align: left;  /* Align text to the left */
+    margin-left: 20px; /* Match the left margin with "Courses" */
+    margin-top: 20px;
+    color: #ff9241; /* Use the same orange accent color */
+    border-bottom: 2px solid #ffe6d1; /* Add the underline with a matching color */
+    padding-bottom: 5px; /* Add spacing between text and underline */
+}
+
+.quiz-card {
+    border: 1px solid #e0e0e0;
+    background-color: #FFE6D1;
+    padding: 24px;
+    margin: 16px auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-section {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Added grid for layout */
+.quiz-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.question-container {
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.result-button,
+.redo-button {
+    background-color: #ff9241;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 8px;
+}
+
+/* Added subtle hover and focus */
+.result-button:hover,
+.redo-button:hover {
+    background-color: #ff5722;
+    transform: translateY(-2px);
+}
+
+.result-button:active,
+.redo-button:active {
+    background-color: #e64a19;
+    transform: translateY(1px);
+}
+
+.result-button:disabled,
+.redo-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.quiz-card .button-container {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Updated button styles */
+.submit-button {
+    background-color: #ff9241;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #ff5722;
+    transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.signup-text a {
+    color: #ff9241;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #fef6ef, #fbd1c4); /* Added gradient */
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-details {
+    text-align: center;
+    background-color: #FEF6EF;
+    padding: 30px 20px;
+}
+
+.quiz-details-title {
+    color: #333;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.quiz-details-list {
+    max-width: 900px;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz-details-list .question-detail {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+/* Highlight correct/incorrect answers */
+.question-detail.correct {
+    background-color: #d4edda;
+    border-left: 8px solid #28a745;
+}
+
+.question-detail.incorrect {
+    background-color: #f8d7da;
+    border-left: 8px solid #dc3545;
+}
+
+.question-detail p {
+    margin: 5px 0;
+}
+
+.return-button {
+    padding: 12px 30px;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 30px;
+    background-color: #ff8214;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Updated hover effect for return button */
+.return-button:hover {
+    background-color: #e57f32;
+    transform: translateY(-2px);
+}
+
+.quiz-list {
+    margin: 40px 20px;
+    padding: 20px;
+    background-color: #fceee1; /* Light background for section */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Added subtle animation for card entry */
+.quiz-card {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,150 @@
+
+.result-page {
+  text-align: center;
+  background-color: #FEF6EF;
+  padding: 30px 20px;
+}
+
+
+.result-page h1 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.result-page p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+
+.pie-chart-container {
+  margin: 30px auto;
+  max-width: 300px;
+}
+
+
+.answers-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.answers-list h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.answers-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.answers-list li {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.answers-list li.correct {
+  background-color: #d4edda; 
+  border-left: 8px solid #28a745;
+}
+
+.answers-list li.incorrect {
+  background-color: #f8d7da; 
+  border-left: 8px solid #dc3545;
+}
+
+.answers-list li p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+
+.explanation {
+  font-style: italic;
+  color: #6c757d;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+}
+
+.modal-content ul li {
+  margin: 5px 0;
+}
+
+.close-modal-button {
+  padding: 10px 20px;
+  background-color: #ff6f3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.close-modal-button:hover {
+  background-color: #e57f32;
+}
+
+
+.return-button {
+  padding: 12px 30px;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-top: 30px;
+  background-color: #ff8214;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.return-button:hover {
+  background-color: #e57f32;
+}
+
+
+.margin {
+  height: 50px;
+}

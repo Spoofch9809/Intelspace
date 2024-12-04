@@ -1,0 +1,198 @@
+.quizz-container {
+  padding: 20px;
+  background-color: #ffe6d1;
+  border-radius: 30px;
+  max-width: 700px;
+  margin: 75px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+
+  justify-content: center; 
+  align-items: center; 
+}
+  
+.quiz-header h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quiz-content {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+.quiz-content p{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.quiz-content pre {
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  border: 1.25px solid gray;
+}
+
+
+.options .option {
+  margin: 10px 0px 10px 180px;
+  text-align: left;
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.option-button {
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #5bed8f;
+}
+
+.option-button.selected {
+  background-color: #5bed8f;
+}
+
+.quiz-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.quiz-navigation button {
+  margin: 0 4px;
+  padding: 9px;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  padding-left: 17px;
+  padding-right: 17px;
+  border: none;
+}
+
+.quiz-navigation button.active {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1)); 
+  border-radius: 25px;
+  border: 2px solid #ddd; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: background 0.5s, box-shadow 0.3s, transform 0.2s;
+}
+
+
+.quiz-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exit-button, .submit-button {
+  padding: 10px 20px;
+  background-color: #ff8214;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+}
+
+.exit-button:hover{
+  background-color: #e57f32;
+} 
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.quizz-container, button, .quiz-content pre {
+  color: black; 
+}
+
+.prev-button, .next-button {
+  border-radius: 25px;
+}
+
+.prev-button:hover, .next-button:hover{
+  background-color: lightgray;
+}
+
+.margin {
+  background-color: #FEF6EF;
+  height: 50px; 
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #FEF6EF;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modal-content button {
+  background-color: #ff8214;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #e57f32;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  margin: 10px 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.modal-content li {
+  margin-bottom: 5px;
+  color: #333;
+}

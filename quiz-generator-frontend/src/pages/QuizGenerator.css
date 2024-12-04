@@ -1,0 +1,374 @@
+/* Main container */
+.quiz-generator-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f6e8d8;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Upload box */
+.upload-box {
+  padding: 20px;
+  background-color: #fef5e7;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* File upload styling */
+.file-upload-box {
+  display: block;
+  padding: 50px;
+  text-align: center;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  color: #6e6e6e;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.file-upload-box:hover {
+  background-color: #d8d8d8;
+}
+
+#file-upload {
+  display: none;
+}
+
+/* Input for number of questions */
+.question-input {
+  margin-top: 20px;
+  color: black;
+}
+
+.question-input input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 20px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+  padding-left: 5px;
+  margin-left: 10px;
+}
+
+/* Submit button */
+.convert-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff8214;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.convert-btn:hover {
+  background-color: #e57f32;
+}
+
+.convert-btn:disabled {
+  background-color: #f7c08a;
+  cursor: not-allowed;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Close button for pop-up */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Question text and answer options */
+.question-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ff6f3c;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.answer-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.answerButton {
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answerButton:hover {
+  background-color: #5bed8f;
+}
+
+.answerButton.selected {
+  background-color: #5bed8f;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Pagination button styling (keeping it circular) */
+.pagination-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 50%;  /* Change this to 50% for circular shape */
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button.active {
+  background-color: #ff6f3c;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination-button.unanswered {
+  border-color: #ff0000;
+}
+
+.pagination-button:hover {
+  background-color: #eaeaea;
+}
+
+
+/* Final Score Section */
+.score-section {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.selected {
+  background-color: #5bed8f;
+  color: white;
+}
+
+/* Navigation buttons (Prev, Next) */
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.prev-button, .next-button {
+  background-color: #ffe6d1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: #ffcf99;
+}
+
+.prev-button:disabled, .next-button:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+
+/* Submit button styling */
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6f3c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #e57f32;
+}
+
+.submit-btn:disabled {
+  background-color: #f7c08a;
+  cursor: not-allowed;
+}
+
+/* Unanswered Questions Pop-up */
+.unanswered-questions-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 400px;
+  text-align: center;
+}
+
+.unanswered-questions-popup ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+.unanswered-questions-popup li {
+  margin: 10px 0;
+}
+
+.unanswered-questions-popup button {
+  padding: 10px 20px;
+  background-color: #ff6f3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.unanswered-questions-popup button:hover {
+  background-color: #e57f32;
+}
+
+/* Modal overlay for the background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 25px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header for the modal */
+.modal-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Body text inside the modal */
+.modal-body {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Styling for unordered lists inside the modal */
+.modal-content ul {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.modal-content ul li {
+  font-size: 15px;
+  color: #444;
+  margin: 5px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.modal-content ul li::before {
+  content: "•";
+  color: #ff8214;
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+}
+
+/* Footer area containing the button */
+.modal-footer {
+  margin-top: 20px;
+}
+
+/* Button inside the modal */
+.modal-footer button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff8214;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-footer button:hover {
+  background-color: #e57f32;
+  transform: translateY(-2px);
+}
+
+.modal-footer button:active {
+  background-color: #cc6e2a;
+  transform: translateY(1px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
